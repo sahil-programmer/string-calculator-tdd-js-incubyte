@@ -1,0 +1,23 @@
+{
+  "name": "string-calculator-tdd-js-incubyte",
+  "version": "1.0.0",
+  "description": "String Calculator Kata using Test-Driven Development in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahil-programmer/string-calculator-tdd-js-incubyte.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahil-programmer/string-calculator-tdd-js-incubyte/issues"
+  },
+  "homepage": "https://github.com/sahil-programmer/string-calculator-tdd-js-incubyte#readme",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  }
+}
