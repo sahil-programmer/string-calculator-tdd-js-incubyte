@@ -15,11 +15,7 @@ class StringCalculator {
         const matches = [...delimiterRaw.matchAll(/\[([^\]]+)\]/g)].map(
           (m) => m[1]
         );
-
-        if (matches.length > 1 && matches.some((d) => d.length > 1)) {
-          throw new Error("Multiple multi‑char delimiters not supported");
-        }
-        delimiters = matches;
+        delimiters = matches.length ? matches : delimiters;
       } else {
         delimiters = [delimiterRaw];
       }
