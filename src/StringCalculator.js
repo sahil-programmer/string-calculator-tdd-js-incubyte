@@ -2,9 +2,10 @@ class StringCalculator {
   add(numbers) {
     if (typeof numbers !== "string" || !numbers.trim()) return 0;
 
-    if (numbers.match(/,\n|\n,/)) {
+    if (numbers.match(/,\n|\n,/) || /[,|\n]$/.test(numbers)) {
       throw new Error("Invalid input format");
     }
+
     let delimiters = [","];
     if (numbers.startsWith("//")) {
       const delimiterEnd = numbers.indexOf("\n");
