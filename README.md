@@ -25,13 +25,5 @@ This project is a clean and test-driven implementation of a **String Calculator*
 npm install
 npm test
 
-## 📁 Project Structure
 
-string-calculator-tdd/
-├── __tests__/               
-│   └── StringCalculator.test.js
-├── src/
-│   └── StringCalculator.js  
-├── package.json
-├── README.md
 
