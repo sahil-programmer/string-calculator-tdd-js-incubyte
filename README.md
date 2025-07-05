@@ -25,5 +25,5 @@ This project is a clean and test-driven implementation of a **String Calculator*
 npm install
 npm test
 
-
+![Initial Test Fail](./screenshots/step1-initial-test-fail.png)
 
