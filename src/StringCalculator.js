@@ -19,7 +19,7 @@ class StringCalculator {
       throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
     }
 
-    return list.reduce((sum, n) => sum + n, 0);
+    return list.filter((n) => n <= 1000).reduce((sum, n) => sum + n, 0);
   }
 }
 
