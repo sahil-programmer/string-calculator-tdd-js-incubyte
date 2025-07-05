@@ -49,7 +49,7 @@ npm test
 
 ![3redtest](https://github.com/user-attachments/assets/4e9e4649-8660-4dae-acb2-4053c2701089)
 
-Test: Two Numbers Input
+✅Test: Two Numbers Input
 
 ![3greentest](https://github.com/user-attachments/assets/86595be2-f173-424c-8eda-134bf120f7c7)
 
