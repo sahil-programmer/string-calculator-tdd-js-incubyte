@@ -9,11 +9,17 @@ class StringCalculator {
       numbers = numbers.substring(delimiterEnd + 1);
     }
 
-    return numbers
+    const list = numbers
       .replace(/\n/g, delimiter)
       .split(delimiter)
-      .map((n) => Number(n.trim()))
-      .reduce((sum, n) => sum + n, 0);
+      .map((n) => Number(n.trim()));
+
+    const negatives = list.filter((n) => n < 0);
+    if (negatives.length > 0) {
+      throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
+    }
+
+    return list.reduce((sum, n) => sum + n, 0);
   }
 }
 
