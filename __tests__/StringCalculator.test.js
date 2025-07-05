@@ -25,6 +25,10 @@ describe("StringCalculator", () => {
     const calculator = new StringCalculator();
     expect(() => calculator.add("1,\n")).toThrow("Invalid input format");
   });
+  test("throws error when string ends with a delimiter", () => {
+    const calc = new StringCalculator();
+    expect(() => calc.add("1,2,")).toThrow("Invalid input format");
+  });
   test("returns sum when custom delimiter is defined like //;\\n1;2", () => {
     const calculator = new StringCalculator();
     expect(calculator.add("//;\n1;2")).toBe(3);
