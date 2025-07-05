@@ -1,21 +1,30 @@
 class StringCalculator {
   add(numbers) {
     if (typeof numbers !== "string" || !numbers.trim()) return 0;
-    let delimiter = ",";
+
+    let delimiters = [","];
     if (numbers.startsWith("//")) {
       const delimiterEnd = numbers.indexOf("\n");
       const delimiterRaw = numbers.substring(2, delimiterEnd);
-      delimiter =
-        delimiterRaw.startsWith("[") && delimiterRaw.endsWith("]")
-          ? delimiterRaw.slice(1, -1)
-          : delimiterRaw;
+
+      if (delimiterRaw.startsWith("[") && delimiterRaw.endsWith("]")) {
+        delimiters = [...delimiterRaw.matchAll(/\[([^\]]+)\]/g)].map(
+          (m) => m[1]
+        );
+      } else {
+        delimiters = [delimiterRaw];
+      }
+
       numbers = numbers.substring(delimiterEnd + 1);
     }
 
-    const list = numbers
-      .replace(/\n/g, delimiter)
-      .split(delimiter)
-      .map((n) => Number(n.trim()));
+    const delimiterRegex = new RegExp(
+      delimiters
+        .map((d) => d.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+        .join("|") + "|\n"
+    );
+
+    const list = numbers.split(delimiterRegex).map((n) => Number(n.trim()));
 
     const negatives = list.filter((n) => n < 0);
     if (negatives.length > 0) {
