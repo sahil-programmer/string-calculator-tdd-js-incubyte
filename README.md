@@ -24,6 +24,7 @@ This project is a clean and test-driven implementation of a **String Calculator*
 ```bash
 npm install
 npm test
+---
 
 ## 🔴 Initial Failing Test
 
