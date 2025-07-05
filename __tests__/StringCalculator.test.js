@@ -35,4 +35,8 @@ describe("StringCalculator", () => {
     const calculator = new StringCalculator();
     expect(calculator.add("2,1001")).toBe(2);
   });
+  test("should return sum with custom delimiter of any length", () => {
+    const calculator = new StringCalculator();
+    expect(calculator.add("//[***]\n1***2***3")).toBe(6);
+  });
 });
