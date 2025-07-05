@@ -25,5 +25,5 @@ This project is a clean and test-driven implementation of a **String Calculator*
 npm install
 npm test
 
-![Initial Test Fail](https://github.com/sahil-programmer/string-calculator-tdd-js-incubyte/blob/main/screenshots/1redtest.png)
+![Initial Test Fail](https://github.com/sahil-programmer/string-calculator-tdd-js-incubyte/blob/main/screenshots/1redtest.png?raw=true)
 
