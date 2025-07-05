@@ -1,19 +1,17 @@
 class StringCalculator {
   add(numbers) {
     if (typeof numbers !== "string" || !numbers.trim()) return 0;
-    let input = numbers;
+    let delimiter = ",";
 
     if (numbers.startsWith("//")) {
-      const delimiterEndIndex = numbers.indexOf("\n");
-      const delimiter = numbers.substring(2, delimiterEndIndex);
-      input = numbers
-        .substring(delimiterEndIndex + 1)
-        .split(delimiter)
-        .join(",");
+      const delimiterEnd = numbers.indexOf("\n");
+      delimiter = numbers.substring(2, delimiterEnd);
+      numbers = numbers.substring(delimiterEnd + 1);
     }
-    return input
-      .replace(/\n/g, ",")
-      .split(",")
+
+    return numbers
+      .replace(/\n/g, delimiter)
+      .split(delimiter)
       .map((n) => Number(n.trim()))
       .reduce((sum, n) => sum + n, 0);
   }
