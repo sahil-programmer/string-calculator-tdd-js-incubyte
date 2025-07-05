@@ -18,13 +18,13 @@ This project is a clean and test-driven implementation of a **String Calculator*
 - Throws error for invalid formats like `1,\n`
 
 
-## 🧪 Run Tests
+# 🧪 Run Tests
 
-# Install dependencies
-npm install
+## Install dependencies
+### npm install
 
-# Run tests
-npm test
+## Run tests
+### npm test
 
 
 ## 🔴 All Test cases ScreenShots
