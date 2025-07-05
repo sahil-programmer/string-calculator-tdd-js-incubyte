@@ -1,6 +1,8 @@
 class StringCalculator {
   add(numbers) {
-    return numbers?.trim() === "" ? 0 : null;
+    if (!numbers || numbers.trim() === "") return 0;
+
+    return parseInt(numbers, 10);
   }
 }
 
