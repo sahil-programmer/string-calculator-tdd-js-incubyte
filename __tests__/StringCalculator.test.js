@@ -51,4 +51,8 @@ describe("StringCalculator", () => {
     const calc = new StringCalculator();
     expect(calc.add("//[*][%]\n1*2%3")).toBe(6);
   });
+  test("returns sum when multiple long delimiters are used (e.g., //[***][%%]\\n1***2%%3)", () => {
+    const calc = new StringCalculator();
+    expect(calc.add("//[***][%%]\n1***2%%3")).toBe(6);
+  });
 });

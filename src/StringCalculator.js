@@ -12,9 +12,14 @@ class StringCalculator {
       const delimiterRaw = numbers.substring(2, delimiterEnd);
 
       if (delimiterRaw.startsWith("[") && delimiterRaw.endsWith("]")) {
-        delimiters = [...delimiterRaw.matchAll(/\[([^\]]+)\]/g)].map(
+        const matches = [...delimiterRaw.matchAll(/\[([^\]]+)\]/g)].map(
           (m) => m[1]
         );
+
+        if (matches.length > 1 && matches.some((d) => d.length > 1)) {
+          throw new Error("Multiple multi‑char delimiters not supported");
+        }
+        delimiters = matches;
       } else {
         delimiters = [delimiterRaw];
       }
@@ -31,7 +36,7 @@ class StringCalculator {
     const list = numbers.split(delimiterRegex).map((n) => Number(n.trim()));
 
     const negatives = list.filter((n) => n < 0);
-    if (negatives.length > 0) {
+    if (negatives.length) {
       throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
     }
 
