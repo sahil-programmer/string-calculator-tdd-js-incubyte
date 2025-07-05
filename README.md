@@ -17,6 +17,11 @@ This project is a clean and test-driven implementation of a **String Calculator*
 - Throws error for negative numbers, listing all negatives
 - Throws error for invalid formats like `1,\n`
 
+
+## 🔴 Initial Failing Test
+
+![1 Test Fail](https://raw.githubusercontent.com/sahil-programmer/string-calculator-tdd-js-incubyte/main/screenshots/1redtest.png)
+
 ---
 
 ## 🧪 Run Tests
