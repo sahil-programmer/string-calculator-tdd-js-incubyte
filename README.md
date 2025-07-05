@@ -18,7 +18,7 @@ This project is a clean and test-driven implementation of a **String Calculator*
 - Throws error for invalid formats like `1,\n`
 
 
-## 🧪 Run Tests
+🧪 Run Tests
 
 ```bash
 npm install
