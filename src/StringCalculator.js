@@ -1,8 +1,8 @@
 class StringCalculator {
   add(numbers) {
-    if (!numbers || numbers.trim() === "") return 0;
+    const input = typeof numbers === "string" ? numbers.trim() : "";
 
-    return parseInt(numbers, 10);
+    return input ? Number(input) : 0;
   }
 }
 
