@@ -133,6 +133,14 @@ Test: Two Numbers Input
 
 ![13_green_test](https://github.com/user-attachments/assets/3afdc406-0f7b-430a-bc08-b33bd9c28f66)
 
+---
+
+### 👤 Author
+
+**Sahil Tarofawala**  
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=flat&logo=github&logoColor=white)](https://github.com/sahil-programmer)
+
+
 
 
 
