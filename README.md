@@ -17,6 +17,17 @@ This project is a clean and test-driven implementation of a **String Calculator*
 - Throws error for negative numbers, listing all negatives
 - Throws error for invalid formats like `1,\n`
 
+---
+
+## 🧪 Run Tests
+
+```bash
+npm install
+npm test
+
+
+---
+
 
 ## 🔴 Test
 
@@ -128,17 +139,6 @@ Test: Two Numbers Input
 
 
 
-
----
-
-## 🧪 Run Tests
-
-```bash
-npm install
-npm test
-
-
----
 
 
 
