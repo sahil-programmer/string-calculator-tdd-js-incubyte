@@ -21,10 +21,10 @@ This project is a clean and test-driven implementation of a **String Calculator*
 # 🧪 Run Tests
 
 ## Install dependencies
-### npm install
+##### npm install
 
 ## Run tests
-### npm test
+##### npm test
 
 
 ## 🔴 All Test cases ScreenShots
