@@ -1,6 +1,6 @@
 class StringCalculator {
   add(numbers) {
-    if (numbers === "") return 0;
+    return numbers?.trim() === "" ? 0 : null;
   }
 }
 
