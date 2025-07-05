@@ -2,15 +2,14 @@ class StringCalculator {
   add(numbers) {
     if (typeof numbers !== "string" || !numbers.trim()) return 0;
     let delimiter = ",";
-
-    if (input.startsWith("//")) {
-      const delimiterEnd = input.indexOf("\n");
-      const delimiterRaw = input.substring(2, delimiterEnd);
+    if (numbers.startsWith("//")) {
+      const delimiterEnd = numbers.indexOf("\n");
+      const delimiterRaw = numbers.substring(2, delimiterEnd);
       delimiter =
         delimiterRaw.startsWith("[") && delimiterRaw.endsWith("]")
           ? delimiterRaw.slice(1, -1)
           : delimiterRaw;
-      input = input.substring(delimiterEnd + 1);
+      numbers = numbers.substring(delimiterEnd + 1);
     }
 
     const list = numbers
