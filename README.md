@@ -20,7 +20,6 @@ This project is a clean and test-driven implementation of a **String Calculator*
 
 🧪 Run Tests
 
-```bash
 npm install
 npm test
 
